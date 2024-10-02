@@ -1,0 +1,115 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Cream);
+}
+
+.container {
+    height: 25rem;
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--White);
+    border-radius: 10px;
+
+    .perfumImg {
+        img {
+            height: 100%;
+            border-radius: 10px 0 0 0;
+
+        }
+    }
+
+    .productDescription {
+        width: 45%;
+        margin-left: 2rem;
+
+        .perfumTitle {
+            width: 75%;
+
+            h3 {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: var(--Dark-grayish-blue);
+                font-size: 12px;
+                margin: 1.25rem 0;
+            }
+
+            h1 {
+                font-family: 'Fraunces', serif;
+                margin-bottom: 0.938rem;
+                font-size: 32px;
+                font-weight: bold;
+            }
+
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--Dark-grayish-blue);
+            font-size: 16px;
+        }
+
+        .buy {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: .6rem;
+
+            p {
+                margin-left: 5px;
+                text-decoration: line-through;
+            }
+
+            h1 {
+                color: var(--Dark-cyan);
+                font-family: "Fraunces", sans-serif;
+            }
+
+        }
+    }
+
+    .buyBtn {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        a {
+            width: 100%;
+            border: none;
+            background-color: var(--Dark-cyan);
+            color: var(--White);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: .1s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+    }
+}
