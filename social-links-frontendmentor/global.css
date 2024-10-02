@@ -1,0 +1,98 @@
+:root {
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--Grey-900);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--White);
+}
+
+.container {
+    background-color: var(--Grey-800);
+    width: 30rem;
+    height: 50rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .profilePhoto {
+            img {
+                border-radius: 100px;
+
+            }
+        }
+
+        .mainInfos {
+            margin-bottom: 1.2rem;
+
+            p {
+                color: var(--Green);
+                font-weight: bold;
+                margin-top: 0.9rem;
+            }
+        }
+    }
+
+
+    .socialMedia {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+        width: 100%;
+
+        & a {
+            width: 75%;
+            text-decoration: none;
+            text-align: center;
+            color: var(--White);
+            background-color: var(--Grey-700);
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.1s;
+        }
+
+        & a:hover{
+            color: var(--Grey-900);
+            background-color: var(--Green);
+        }
+    }
+}
+
+.attribution{
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 500px ) {
+    .container{
+        width: 95%;
+    }
+}
